@@ -15,13 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            SubjectSeeder::class,
-            SourceTypeSeeder::class,
-            DeviceTypeSeeder::class,
             AdminSeeder::class,
-            TutorSeeder::class,
-            RedirectionReasonSeeder::class,
-            QuestionSeeder::class,
         ]);
     }
 }

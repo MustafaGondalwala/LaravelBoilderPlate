@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\Admin\ListController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +29,12 @@ Route::group(['middleware' => ['admin.auth'], 'as' => 'admin.'], function () {
     Route::match(['GET', 'POST'], 'add', [ListController::class, 'add'])->name('add');
     Route::match(['GET', 'POST'], 'edit/{id}', [ListController::class, 'add'])->name('edit');
     Route::match(['DELETE'], 'delete/{id?}', [ListController::class, 'delete'])->name('delete');
+
+    Route::group(['prefix' => 'game', 'as' => 'game.'], function () {
+        Route::match(['GET', 'POST'], 'list', [GameController::class, 'list'])->name('list');
+        Route::match(['GET', 'POST'], 'export', [GameController::class, 'export'])->name('export');
+        Route::get('add/{game?}', [GameController::class, 'add'])->name('add');
+        Route::post('add/{game?}', [GameController::class, 'store'])->name('store');
+        Route::delete('delete/{game?}', [GameController::class, 'delete'])->name('delete');
+    });
 });

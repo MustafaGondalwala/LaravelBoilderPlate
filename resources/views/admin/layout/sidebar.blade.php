@@ -28,6 +28,16 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="has-sub nav-item"><a href="javascript:;"><i class="ft-home"></i><span class="menu-title"
+                        data-i18n="Dashboard">Game</span><span
+                        class="tag badge badge-pill badge-danger float-right mr-1 mt-1"></span></a>
+                            <ul class="menu-content" style="">
+                                <li class="">
+                                    <a href="{{ route('admin.game.list') }}"><i class="ft-arrow-right submenu-icon"></i><span
+                                            class="menu-item" data-i18n="Dashboard 1">All Games</span></a>
+                                </li>
+                            </ul>
+                        </li>
                 </ul>
         </div>
     </div>
