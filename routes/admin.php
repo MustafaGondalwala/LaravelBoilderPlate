@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('', [AuthController::class, 'redirectToLogin']);
-Route::get('login', [AuthController::class, 'getLogin'])->name('admin-login');
+Route::get('login', [AuthController::class, 'getLogin'])->name('admin.login');
 Route::post('login', [AuthController::class, 'getLogin'])->name('admin-login-post');
 
 Route::group(['middleware' => ['admin.auth'], 'as' => 'admin.'], function () {
@@ -24,7 +24,7 @@ Route::group(['middleware' => ['admin.auth'], 'as' => 'admin.'], function () {
 
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('list', [ListController::class, 'list'])->name('list');
-    Route::match(['GET', 'POST'], 'add', [ListController::class, 'add'])->name('add');
-    Route::match(['GET', 'POST'], 'edit/{id}', [ListController::class, 'add'])->name('edit');
-    Route::match(['DELETE'], 'delete/{id?}', [ListController::class, 'delete'])->name('delete');
+    Route::get('add/{admin?}', [ListController::class, 'add'])->name('add');
+    Route::post('add/{admin?}', [ListController::class, 'store'])->name('store');
+    Route::match(['DELETE'], 'delete/{admin?}', [ListController::class, 'delete'])->name('delete');
 });
