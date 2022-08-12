@@ -14,7 +14,7 @@ class AuthController extends Controller
     public function __construct(AuthService $authService)
     {
         $this->authService = $authService;
-        $this->middleware('admin.auth', ['except' => ['getLogin']]);
+        $this->middleware('guest', ['except' => ['logout']]);
     }
 
     public function getLogin(Request $request)

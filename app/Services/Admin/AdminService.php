@@ -13,8 +13,11 @@ class AdminService
     public function datatable($request)
     {
         $data = Admin::latest();
-        if ($request->title != '') {
-            $data->where('title', 'like', '%'.$request->title.'%');
+        if ($request->name != '') {
+            $data->where('name', 'like', '%'.$request->name.'%');
+        }
+        if ($request->email != '') {
+            $data->where('email', 'like', '%'.$request->email.'%');
         }
 
         return DataTables::of($data)

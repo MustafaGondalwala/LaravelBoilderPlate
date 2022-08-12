@@ -15,6 +15,25 @@
                         </div>
                     </div>
                     <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12 col-sm-6">
+                                <label>Email</label>
+                                <input type="text" class="form-control" id="email" />
+                            </div>
+                            <div class="col-md-3 col-sm-12 col-sm-6">
+                                <label>Name</label>
+                                <input type="text" class="form-control" id="name" />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="form-group col-md-6 col-sm-12 col-sm-6">
+                                <label>
+                                    <button class="btn find btn-primary">Find</button>
+                                    <button class="btn reset btn-warning">Reset</button>
+                                </label>
+                            </div>
+                        </div>
                         <table class="adminTable table table-bordered table-hover">
                             <thead>
                                 <tr>
@@ -40,6 +59,9 @@
         $('.adminTable').DataTable().draw(true);
     });
     $('.reset').click(function(){
+
+        $("#email").val("");
+        $("#name").val("");
          $('.adminTable').DataTable().draw(true);
     });
 
@@ -57,8 +79,8 @@
         url: "{{route('admin.list',['ajax'=>'true'])}}",
         type: 'GET',
         data: function (d) {
-           d.title = $("#title").val();
-           d.subject_id = $("#subject_id").val();
+           d.email = $("#email").val().trim();
+           d.name = $("#name").val().trim();;
         }
       },
   });
