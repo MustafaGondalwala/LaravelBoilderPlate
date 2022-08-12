@@ -22,11 +22,9 @@ Route::post('login', [AuthController::class, 'getLogin'])->name('admin-login-pos
 Route::group(['middleware' => ['admin.auth'], 'as' => 'admin.'], function () {
     Route::get('dashboard', [DashboardController::class, 'home'])->name('dashboard');
 
-
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('list', [ListController::class, 'list'])->name('list');
     Route::match(['GET', 'POST'], 'add', [ListController::class, 'add'])->name('add');
     Route::match(['GET', 'POST'], 'edit/{id}', [ListController::class, 'add'])->name('edit');
     Route::match(['DELETE'], 'delete/{id?}', [ListController::class, 'delete'])->name('delete');
-
 });

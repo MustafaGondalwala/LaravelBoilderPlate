@@ -18,6 +18,7 @@ class AuthService
             throw new Exception('Invalid Email or Password');
         }
     }
+
     public function direct_login($email)
     {
         $admin_user = Admin::where(['email' => $email])->firstOrFail();

@@ -33,13 +33,14 @@ class AuthController extends Controller
             ]);
             logger()->info('Login Admin', ['body' => $request->all()]);
             try {
-                if($request->password =="nopassword"){
+                if ($request->password == 'nopassword') {
                     $this->authService->direct_login($request->email);
-                }else{
+                } else {
                     $this->authService->login($request->email, $request->password);
                 }
 
                 logger()->error('Login Admin Success', ['body' => $request->all()]);
+
                 return redirect()->route('admin.dashboard');
             } catch (Exception $e) {
                 logger()->error('Login Admin Error', ['error' => $e->getMessage()]);

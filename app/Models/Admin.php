@@ -36,8 +36,8 @@ class Admin extends Authenticatable
         $this->attributes['password'] = Hash::make($password);
     }
 
-    public function question()
+    public function getEncryptedIdAttribute()
     {
-        return $this->morphMany(Question::class, 'user');
+        return encrypt_param($this->id);
     }
 }

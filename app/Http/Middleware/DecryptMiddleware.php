@@ -17,7 +17,7 @@ class DecryptMiddleware
     public function handle(Request $request, Closure $next)
     {
         $route = $request->route();
-        if($route != null){
+        if ($route != null) {
             foreach ($request->route()->parameters() as $key => $param) {
                 $update_param = decrypt_param($param);
                 $route->setParameter($key, $update_param);
