@@ -31,13 +31,15 @@ class HeaderService
                 'page_id' => $page_id,
             ];
             if ($page_id == null) {
-                Header::create(
+                $checkSrNoExists = Header::where(['sr_no' => $no])->exists();
+                Header::updateOrCreate(
+                    ['sr_no' => $checkSrNoExists == true ? $no : null],
                     $addData
                 );
             } else {
                 $checkSrNoExists = HeaderItem::where(['sr_no' => $no])->exists();
                 HeaderItem::updateOrCreate(
-                    ['sr_no' => $checkSrNoExists == true ? $sr_no : null],
+                    ['sr_no' => $checkSrNoExists == true ? $no : null],
                     $addData
                 );
             }

@@ -7,19 +7,19 @@ return [
     'app_name' => 'SkyLink',
     'component_type' => [
         'text',
-        'link',
         'image',
         'video',
+        'file'
     ],
     'header_type' => [
         'meta',
-        'css_link',
+        'css_file',
         'icon',
         'title',
         'script',
     ],
     'footer_type' => [
         'script',
-        'footer_link',
+        'footer_file',
     ],
 ];

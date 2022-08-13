@@ -32,16 +32,15 @@ class FooterService
                 'page_id' => $page_id,
             ];
             if ($page_id == null) {
-                Footer::create(
+                $checkSrNoExists = Footer::where(['sr_no' => $no])->exists();
+                Footer::updateOrCreate(
+                    ['sr_no' => $checkSrNoExists == true ? $no : null],
                     $addData
                 );
             } else {
-                FooterItem::create(
-                    $addData
-                );
                 $checkSrNoExists = FooterItem::where(['sr_no' => $no])->exists();
                 FooterItem::updateOrCreate(
-                    ['sr_no' => $checkSrNoExists == true ? $sr_no : null],
+                    ['sr_no' => $checkSrNoExists == true ? $no : null],
                     $addData
                 );
             }

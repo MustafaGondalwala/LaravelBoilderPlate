@@ -1,17 +1,27 @@
 <tr>
-    <td width="20%">
-        <input type="number" class="form-control" name="component[sr_no][]" value="{{ @$item->sr_no }}"/>
+    <td>
+        <input rows="10" type="number" id="sr_no" class="form-control"
+        name="component_item[sr_no][]" value="{{ @$item->sr_no }}"/>
     </td>
     <td>
-        <select class="form-control" name="component[component_id][]">
-            <option disabled selected>Select</option>
-            @foreach ($components as $component)
-                <option {{ @$item->component_id == $component->id ? 'selected="selected"' : '' }} value="{{ $component->id }}">{{ $component->name }}</option>
+        <input rows="10" type="text" id="link_name" class="form-control"
+        name="component_item[link_name][]" value="{{ @$item->name }}"/>
+    </td>
+    <td>
+        <select class="form-control component-type-select" name="component_item[type][]">
+            @foreach (custom('component_type') as $type)
+                <option {{ @$item->type == $type ? 'selected="selected"' : '' }} value="{{ $type }}">{{ $type }}</option>
             @endforeach
         </select>
     </td>
     <td>
-        <select class="form-control" id="status" name="component[status][]" >
+        <input type="text" class="form-control component-type-value" multiple name="component_item[value][]"/>
+    </td>
+    <td>
+        <input type="text" class="form-control" name="component_item[value1][]" value="{{ @$item->value1 }}"/>
+    </td>
+    <td>
+        <select class="form-control" id="status" name="component_item[status][]" >
             <option value="" disabled>Select</option>
             <option value="1" <?php if(@$item != null && $item->status=='1'){ echo
                 'selected'; }?>>Active</option>
@@ -20,3 +30,16 @@
         </select>
     </td>
 </tr>
+@section('component_item')
+<script>
+    $(document).on("change",'.component-type-select', function(){
+        const value = $(this).val()
+        const valueInput = $(this).closest('tr').find('.component-type-value');
+        if(value == "image" || value == "video" || value == "file"){
+            valueInput.get(0).type = 'file';
+        }else{
+            valueInput.get(0).type = 'text';
+        }
+     });
+</script>
+@endsection

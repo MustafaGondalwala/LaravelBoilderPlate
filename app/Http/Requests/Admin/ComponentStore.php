@@ -24,10 +24,10 @@ class ComponentStore extends FormRequest
     public function rules()
     {
         return [
-            'html' => 'required',
             'name' => 'required',
             'status' => 'required|boolean',
-            'type' => 'required|array',
+            'component_item' => 'required|array',
+            'html' => 'required'
         ];
     }
 }

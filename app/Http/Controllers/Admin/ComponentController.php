@@ -55,7 +55,7 @@ class ComponentController extends Controller
             ]);
 
             DB::beginTransaction();
-            $this->componentService->addUpdate($this->admin, $component, $addData, $request->type);
+            $this->componentService->addUpdate($this->admin, $component, $addData, $request->component_item);
 
             DB::commit();
 

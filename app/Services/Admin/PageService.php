@@ -63,7 +63,7 @@ class PageService
             $checkNameExists = $page->components()->where(['sr_no' => $no])->exists();
             $page->components()->updateOrCreate(
                 [
-                    'sr_no' => $checkNameExists == true ? $sr_no : null,
+                    'sr_no' => $checkNameExists == true ? $no : null,
                 ],
                 $addData
             );

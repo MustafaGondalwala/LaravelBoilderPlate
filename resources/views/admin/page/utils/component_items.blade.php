@@ -8,9 +8,9 @@
 
 
         @forelse ($items as $item)
-            @include('admin.component.utils.component_item_add', ['item' => $item])
+            @include('admin.page.utils.component_item_add', ['item' => $item])
         @empty
-            @include('admin.component.utils.component_item_add')
+            @include('admin.page.utils.component_item_add')
         @endforelse
         <tbody id="page_component_add_more">
         </tbody>
@@ -28,7 +28,7 @@
 <script>
     $("#page_component_add").click(function(e){
         e.preventDefault()
-        const add_html = `@include('admin.component.utils.component_item_add')`
+        const add_html = `@include('admin.page.utils.component_item_add')`
         $("#page_component_add_more").append(add_html)
     })
 

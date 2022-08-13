@@ -46,6 +46,7 @@ class ComponentService
     public function addUpdateType(Component $component, array $store)
     {
         extract($store, EXTR_PREFIX_SAME, 'dup');
+        dd($store);
         foreach ($link_name as $key => $name) {
             $type_item = $type[$key];
             $sr_no_item = $sr_no[$key];
