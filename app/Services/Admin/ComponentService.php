@@ -46,13 +46,20 @@ class ComponentService
     public function addUpdateType(Component $component, array $store)
     {
         extract($store, EXTR_PREFIX_SAME, 'dup');
-        dd($store);
         foreach ($link_name as $key => $name) {
             $type_item = $type[$key];
             $sr_no_item = $sr_no[$key];
             $status_item = $status[$key];
-            $value_item = isset($value[$key]) ? $value1[$key] : null;
+            $value_item = isset($value[$key]) ? $value[$key] : null;
             $value1_item = isset($value1[$key]) ? $value1[$key] : null;
+            // dd($value, $value1, $key);
+            // dd($value_item, $value1_item, $type_item);
+            if($type_item == ("file" || "image" || "video")){
+                $path = '/'.custom('username').'/component/'.$type_item.'/';
+                $file_path = uploadFile($value1_item, $path);
+                dd($file_path);
+            }
+            dd($type_item);
 
             $addData = [
                 'name' => $name,

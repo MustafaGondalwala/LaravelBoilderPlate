@@ -77,10 +77,18 @@ function custom($string)
     return config('custom.'.$string);
 }
 
+function clean($string)
+{
+    $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+
+    return preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
+}
+
 function uploadFile($file, $path)
 {
-    $filename = rand(1, 1000000).'_'.pathinfo(clean($file->getClientOriginalName()), PATHINFO_FILENAME).'.'.$file->getClientOriginalExtension();
-
+    // $filename = rand(1, 1000000).'_'.pathinfo(clean($file->getClientOriginalName()), PATHINFO_FILENAME).'.'.$file->getClientOriginalExtension();
+    $filename = pathinfo(clean($file->getClientOriginalName()), PATHINFO_FILENAME).'-'.rand(1, 1000000).'.'.$file->getClientOriginalExtension();
     Storage::disk('public')->putFileAs(
         $path,
         $file,

@@ -8,17 +8,17 @@
         name="component_item[link_name][]" value="{{ @$item->name }}"/>
     </td>
     <td>
-        <select class="form-control component-type-select" name="component_item[type][]">
+        <select class="form-control" name="component_item[type][]">
             @foreach (custom('component_type') as $type)
                 <option {{ @$item->type == $type ? 'selected="selected"' : '' }} value="{{ $type }}">{{ $type }}</option>
             @endforeach
         </select>
     </td>
     <td>
-        <input type="text" class="form-control component-type-value" multiple name="component_item[value][]"/>
+        <input type="text" class="form-control" name="component_item[value][]"/>
     </td>
     <td>
-        <input type="text" class="form-control" name="component_item[value1][]" value="{{ @$item->value1 }}"/>
+        <input type="file" class="form-control" name="component_item[value1][]" value="{{ @$item->value1 }}"/>
     </td>
     <td>
         <select class="form-control" id="status" name="component_item[status][]" >
@@ -31,6 +31,7 @@
     </td>
 </tr>
 @section('component_item')
+/**
 <script>
     $(document).on("change",'.component-type-select', function(){
         const value = $(this).val()
@@ -42,4 +43,5 @@
         }
      });
 </script>
+**/
 @endsection

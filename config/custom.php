@@ -5,6 +5,7 @@ return [
     'crypt_key' => '},s3xcPnqxH~kBDK',
     'cache_seconds' => '6000',
     'app_name' => 'SkyLink',
+    'username' => 'skylink-info',
     'component_type' => [
         'text',
         'image',
