@@ -15,7 +15,7 @@
         </select>
     </td>
     <td>
-        <input type="text" class="form-control" name="component_item[value][]"/>
+        <input type="text" class="form-control" name="component_item[value][]" value="{{ @$item->value }}"/>
     </td>
     <td>
         <input type="file" class="form-control" name="component_item[value1][]" value="{{ @$item->value1 }}"/>

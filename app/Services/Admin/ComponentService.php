@@ -52,22 +52,27 @@ class ComponentService
             $status_item = $status[$key];
             $value_item = isset($value[$key]) ? $value[$key] : null;
             $value1_item = isset($value1[$key]) ? $value1[$key] : null;
-            // dd($value, $value1, $key);
-            // dd($value_item, $value1_item, $type_item);
-            if($type_item == ("file" || "image" || "video")){
-                $path = '/'.custom('username').'/component/'.$type_item.'/';
-                $file_path = uploadFile($value1_item, $path);
-                dd($file_path);
+
+            if($name == null){
+                continue;
             }
-            dd($type_item);
+            if($type_item == "file" || $type_item == "image" || $type_item ==  "video"){
+                $path = '/'.custom('username').'/component/'.$type_item.'/';
+                $store_value = "";
+                if($value1_item != null){
+                    $store_value = uploadFile($value1_item, $path);
+                }
+            }else{
+                $store_value = $value_item;
+            }
 
             $addData = [
                 'name' => $name,
                 'sr_no' => $sr_no_item,
                 'status' => $status_item,
                 'type' => $type_item,
-                'value' => $value_item,
-                'value1' => $value1_item,
+                'value' => $store_value,
+                'value1' => null,
             ];
             $checkNameExists = $component->items()->where(['name' => $name])->exists();
             $component->items()->updateOrCreate(
