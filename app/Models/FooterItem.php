@@ -10,4 +10,12 @@ class FooterItem extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'sr_no',
+        'type',
+        'value',
+        'value1',
+        'status',
+        'page_id'
+    ];
 }

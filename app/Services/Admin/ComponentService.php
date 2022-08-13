@@ -48,11 +48,15 @@ class ComponentService
         extract($store, EXTR_PREFIX_SAME, 'dup');
         foreach ($link_name as $key => $name) {
             $type_item = $type[$key];
+            $sr_no_item = $sr_no[$key];
+            $status_item = $status[$key];
             $value_item = isset($value[$key]) ? $value1[$key] : null;
             $value1_item = isset($value1[$key]) ? $value1[$key] : null;
 
             $addData = [
                 'name' => $name,
+                'sr_no' => $sr_no_item,
+                'status' => $status_item,
                 'type' => $type_item,
                 'value' => $value_item,
                 'value1' => $value1_item,

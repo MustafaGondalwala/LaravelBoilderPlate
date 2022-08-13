@@ -1,10 +1,12 @@
 <div class="row">
     <table class="table table-bordered">
         <thead>
+            <th>Sr No</th>
             <th>Link Name</th>
             <th>Type</th>
             <th>Value</th>
             <th>Value1</th>
+            <th>Status</th>
         </thead>
 
         @forelse ($items as $item)

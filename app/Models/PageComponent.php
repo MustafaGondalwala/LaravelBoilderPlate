@@ -6,28 +6,22 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Page extends Model
+class PageComponent extends Model
 {
     use HasFactory;
     use SoftDeletes;
     protected $fillable = [
-        'id',
-        'name',
+        'sr_no',
+        'component_id',
         'status'
     ];
-
-    public function components(){
-        return $this->hasMany(PageComponent::class);
-    }
-    public function headerItem(){
-        return $this->hasMany(HeaderItem::class);
-    }
-    public function footerItem(){
-        return $this->hasMany(FooterItem::class);
-    }
 
     public function getEncryptedIdAttribute()
     {
         return encrypt_param($this->id);
     }
+    public function scopeActive($query){
+        return $query->where(['status' => 1]);
+    }
 }
+

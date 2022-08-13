@@ -34,4 +34,24 @@ Route::group(['middleware' => ['admin.auth'], 'as' => 'admin.'], function () {
         Route::post('add/{component?}', [ComponentController::class, 'store'])->name('store');
         Route::delete('delete/{component?}', [ComponentController::class, 'delete'])->name('delete');
     });
+
+    Route::group(['prefix' => 'page', 'as' => 'page.'], function () {
+        Route::match(['GET', 'POST'], 'list', [PageController::class, 'list'])->name('list');
+        Route::get('add/{page?}', [PageController::class, 'add'])->name('add');
+        Route::post('add/{page?}', [PageController::class, 'store'])->name('store');
+        Route::delete('delete/{page?}', [PageController::class, 'delete'])->name('delete');
+    });
+
+    Route::group(['prefix' => 'header', 'as' => 'header.'], function () {
+        Route::get('add', [HeaderController::class, 'add'])->name('add');
+        Route::post('add', [HeaderController::class, 'store'])->name('store');
+    });
+    Route::group(['prefix' => 'footer', 'as' => 'footer.'], function () {
+        Route::get('add', [FooterController::class, 'add'])->name('add');
+        Route::post('add', [FooterController::class, 'store'])->name('store');
+    });
+    Route::group(['prefix' => 'link', 'as' => 'link.'], function () {
+        Route::get('add', [LinkController::class, 'add'])->name('add');
+        Route::post('add', [LinkController::class, 'store'])->name('store');
+    });
 });

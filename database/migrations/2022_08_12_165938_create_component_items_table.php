@@ -17,10 +17,12 @@ return new class extends Migration
             $table->id();
             $table->foreignId('component_id')->nullable()->constrained('components');
             $table->string('name');
+            $table->integer('sr_no');
             $table->enum('type', ['link', 'image', 'text', 'video']);
             $table->string('value');
             $table->string('value1')->nullable();
             $table->string('value2')->nullable();
+            $table->string('status')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });

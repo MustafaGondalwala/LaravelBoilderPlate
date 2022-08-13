@@ -80,5 +80,7 @@
     <script src="{{ asset('admin/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
     @yield('footer')
     @yield('footer1')
+    @yield('header_item')
+    @yield('footer_item')
 </body>
 </html>

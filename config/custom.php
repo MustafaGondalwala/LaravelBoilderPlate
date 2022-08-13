@@ -11,4 +11,15 @@ return [
         'image',
         'video',
     ],
+    'header_type' => [
+        'meta',
+        'css_link',
+        'icon',
+        'title',
+        'script'
+    ],
+    'footer_type' => [
+        'script',
+        'footer_link'
+    ],
 ];

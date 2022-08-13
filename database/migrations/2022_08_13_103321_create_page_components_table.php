@@ -13,15 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('footer_items', function (Blueprint $table) {
+        Schema::create('page_components', function (Blueprint $table) {
             $table->id();
             $table->foreignId('page_id')->nullable()->constrained('pages');
-            $table->enum('type', ['script', 'footer_link']);
-            $table->string('value');
-            $table->string('value1')->nullable();
-            $table->string('value2')->nullable();
+            $table->foreignId('component_id')->nullable()->constrained('components');
             $table->integer('sr_no');
-            $table->boolean('status')->default(true);
+            $table->boolean('status');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('footer_items');
+        Schema::dropIfExists('page_components');
     }
 };

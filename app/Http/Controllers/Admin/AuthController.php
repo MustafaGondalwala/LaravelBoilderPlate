@@ -14,13 +14,12 @@ class AuthController extends Controller
     public function __construct(AuthService $authService)
     {
         $this->authService = $authService;
-        $this->middleware('guest', ['except' => ['logout']]);
     }
 
     public function getLogin(Request $request)
     {
         if ($request->isMethod('GET')) {
-            if (auth()->user()) {
+            if (auth()->guard('admin')->user()) {
                 return redirect(route('admin.dashboard'));
             }
 
