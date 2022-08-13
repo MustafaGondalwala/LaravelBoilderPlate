@@ -82,5 +82,6 @@
     @yield('footer1')
     @yield('header_item')
     @yield('footer_item')
+    @yield('link_item')
 </body>
 </html>

@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PageStore extends FormRequest
+class LinkStore extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,7 @@ class PageStore extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:pages,name,'.$this->id,
-            'component' => 'required|array',
-            'header_item' => 'sometimes|array',
-            'footer_item' => 'sometimes|array',
-            'status' => 'required|boolean'
+            'link_item' => 'required|array'
         ];
     }
 }

@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('headers', function (Blueprint $table) {
             $table->id();
+            $table->enum('type', ['meta', 'css_link', 'icon', 'title', 'script']);
+            $table->string('value');
+            $table->string('value1')->nullable();
+            $table->string('value2')->nullable();
+            $table->integer('sr_no');
+            $table->boolean('status')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });

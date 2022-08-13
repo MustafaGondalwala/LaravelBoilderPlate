@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('links', function (Blueprint $table) {
+        Schema::create('page_links', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('folder');
-            $table->string('value');
             $table->foreignId('page_id')->nullable()->constrained('pages');
+            $table->string('value')->unique();
+            $table->boolean('status')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('links');
+        Schema::dropIfExists('page_links');
     }
 };

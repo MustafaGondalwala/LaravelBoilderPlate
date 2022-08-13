@@ -30,4 +30,10 @@
             <p>Page</p>
         </a>
     </li>
+    <li class="nav-item">
+        <a href="{{route('admin.link.add')}}" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Link</p>
+        </a>
+    </li>
 </ul>

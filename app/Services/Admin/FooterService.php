@@ -20,6 +20,10 @@ class FooterService
             $value1_item = isset($value1[$key]) ? $value1[$key] : null;
             $status_item = isset($status[$key]) ? $status[$key] : null;
 
+            if($no == null){
+                continue;
+            }
+
             $addData = [
                 'sr_no' => $no,
                 'type' => $type_item,
@@ -28,9 +32,21 @@ class FooterService
                 'status' => $status_item,
                 'page_id' => $page_id
             ];
-            FooterItem::create(
-                $addData
-            );
+            if($page_id == null){
+                Footer::create(
+                    $addData
+                );
+            }else{
+                FooterItem::create(
+                    $addData
+                );
+                $checkSrNoExists = FooterItem::where(['sr_no' => $no])->exists();
+                FooterItem::updateOrCreate(
+                    ['sr_no' => $checkSrNoExists == true ? $sr_no : null],
+                    $addData
+                );
+            }
+
         }
     }
     function get(){
