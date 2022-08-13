@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('header_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('page_id')->nullable()->constrained('pages');
-            $table->enum('type',['meta','css_link','icon','title','script']);
+            $table->enum('type', ['meta', 'css_link', 'icon', 'title', 'script']);
             $table->string('value');
             $table->string('value2')->nullable();
             $table->string('value3')->nullable();

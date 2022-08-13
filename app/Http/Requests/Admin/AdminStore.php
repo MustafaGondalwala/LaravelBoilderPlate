@@ -27,7 +27,7 @@ class AdminStore extends FormRequest
             'name' => 'required|max:255',
             'email' => 'required|email|unique:admins,email,'.$this->id.'|max:255',
             'status' => 'required|boolean',
-            'password' => 'sometimes'
+            'password' => 'sometimes',
         ];
     }
 }

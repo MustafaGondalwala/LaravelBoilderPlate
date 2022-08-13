@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('component_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('component_id')->nullable()->constrained('components');
-            $table->enum('type', ['link','image','text','video']);
+            $table->string('name');
+            $table->enum('type', ['link', 'image', 'text', 'video']);
             $table->string('value');
+            $table->string('value1')->nullable();
             $table->string('value2')->nullable();
-            $table->string('value3')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

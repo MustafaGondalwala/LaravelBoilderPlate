@@ -27,4 +27,11 @@ Route::group(['middleware' => ['admin.auth'], 'as' => 'admin.'], function () {
     Route::get('add/{admin?}', [ListController::class, 'add'])->name('add');
     Route::post('add/{admin?}', [ListController::class, 'store'])->name('store');
     Route::match(['DELETE'], 'delete/{admin?}', [ListController::class, 'delete'])->name('delete');
+
+    Route::group(['prefix' => 'component', 'as' => 'component.'], function () {
+        Route::match(['GET', 'POST'], 'list', [ComponentController::class, 'list'])->name('list');
+        Route::get('add/{component?}', [ComponentController::class, 'add'])->name('add');
+        Route::post('add/{component?}', [ComponentController::class, 'store'])->name('store');
+        Route::delete('delete/{component?}', [ComponentController::class, 'delete'])->name('delete');
+    });
 });

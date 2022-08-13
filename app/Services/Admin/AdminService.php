@@ -44,7 +44,9 @@ class AdminService
             ->rawColumns(['action'])
             ->make(true);
     }
-    public function addUpdate(Admin $admin, Array $data): Admin{
+
+    public function addUpdate(Admin $admin, array $data): Admin
+    {
         return Admin::updateOrCreate(
             ['id' => $admin->exists == true ? $admin->id : null],
             $data

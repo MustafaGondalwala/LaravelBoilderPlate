@@ -10,4 +10,11 @@ class ComponentItems extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    protected $fillable = [
+        'name',
+        'type',
+        'value',
+        'value1',
+    ];
 }

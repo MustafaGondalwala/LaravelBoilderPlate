@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('footer_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('page_id')->nullable()->constrained('pages');
-            $table->enum('type',['script','footer_link']);
+            $table->enum('type', ['script', 'footer_link']);
             $table->string('value');
             $table->string('value2')->nullable();
             $table->string('value3')->nullable();

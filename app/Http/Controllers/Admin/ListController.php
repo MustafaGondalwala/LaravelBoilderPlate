@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Services\Admin\AdminService;
-use App\Models\Admin;
 use App\Http\Requests\Admin\AdminStore;
+use App\Models\Admin;
+use App\Services\Admin\AdminService;
 use Illuminate\Http\Request;
 
 class ListController extends Controller
@@ -33,6 +33,7 @@ class ListController extends Controller
             return view('admin.auth.list');
         }
     }
+
     public function add(Request $request, Admin $admin)
     {
         return view('admin.auth.add', compact('admin'));
@@ -48,9 +49,10 @@ class ListController extends Controller
                 'email',
                 'status',
                 'email',
-                'password'
+                'password',
             ]);
             $this->adminService->addUpdate($admin, $addData);
+
             return redirect()->route('admin.list')->with('message', 'Admin Updated Successfully');
         } catch (\Exception $e) {
             logger()->error('Admin Add/Edit Error', ['admin' => $admin->toArray(), $request->all()]);
@@ -58,7 +60,9 @@ class ListController extends Controller
             return back()->with('message', 'Error Occured');
         }
     }
-    public function delete(Admin $admin){
+
+    public function delete(Admin $admin)
+    {
         try {
             logger()->info('Admin Delete', ['admin' => $admin->toArray()]);
 
