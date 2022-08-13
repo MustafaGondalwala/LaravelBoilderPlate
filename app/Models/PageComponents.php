@@ -16,4 +16,3 @@ class PageComponents extends Model
         return encrypt_param($this->id);
     }
 }
-

@@ -11,7 +11,7 @@ class HeaderItemStore extends FormRequest
      *
      * @return bool
      */
-    public function authorize():bool
+    public function authorize(): bool
     {
         return true;
     }
@@ -21,7 +21,7 @@ class HeaderItemStore extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules():array
+    public function rules(): array
     {
         return [
             'header_item' => 'required|array',

@@ -9,8 +9,8 @@ use App\Models\Page;
  */
 class PageService
 {
-
-    function get(){
+    public function get()
+    {
         return Page::active()->get();
     }
 }

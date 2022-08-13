@@ -28,7 +28,7 @@ class PageStore extends FormRequest
             'component' => 'required|array',
             'header_item' => 'sometimes|array',
             'footer_item' => 'sometimes|array',
-            'status' => 'required|boolean'
+            'status' => 'required|boolean',
         ];
     }
 }

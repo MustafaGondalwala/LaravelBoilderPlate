@@ -10,8 +10,7 @@ use App\Models\HeaderItem;
  */
 class HeaderService
 {
-
-    public static function addUpdateType(array $store, int|null $page_id = null):void
+    public static function addUpdateType(array $store, int|null $page_id = null): void
     {
         extract($store, EXTR_PREFIX_SAME, 'dup');
         foreach ($sr_no as $key => $no) {
@@ -20,7 +19,7 @@ class HeaderService
             $value1_item = isset($value1[$key]) ? $value1[$key] : null;
             $status_item = isset($status[$key]) ? $status[$key] : null;
 
-            if($no == null){
+            if ($no == null) {
                 continue;
             }
             $addData = [
@@ -29,13 +28,13 @@ class HeaderService
                 'value' => $value_item,
                 'value1' => $value1_item,
                 'status' => $status_item,
-                'page_id' => $page_id
+                'page_id' => $page_id,
             ];
-            if($page_id == null){
+            if ($page_id == null) {
                 Header::create(
                     $addData
                 );
-            }else{
+            } else {
                 $checkSrNoExists = HeaderItem::where(['sr_no' => $no])->exists();
                 HeaderItem::updateOrCreate(
                     ['sr_no' => $checkSrNoExists == true ? $sr_no : null],
@@ -44,8 +43,9 @@ class HeaderService
             }
         }
     }
-    function get(){
+
+    public function get()
+    {
         return Header::orderBy('sr_no')->get();
     }
 }
-

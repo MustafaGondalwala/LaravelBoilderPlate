@@ -10,10 +10,13 @@ use Illuminate\Database\Eloquent\Collection;
  */
 class LinkService
 {
-    function get():Collection{
+    public function get(): Collection
+    {
         return PageLink::withPages()->latest()->get();
     }
-    function addUpdate(array $store){
+
+    public function addUpdate(array $store)
+    {
         extract($store, EXTR_PREFIX_SAME, 'dup');
         foreach ($value as $key => $v) {
             $page_id_item = isset($page_id[$key]) ? $page_id[$key] : null;

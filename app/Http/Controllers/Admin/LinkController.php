@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\LinkStore;
-use App\Services\LinkService;
 use App\Services\Admin\LinkService as AdminLinkService;
+use App\Services\LinkService;
 use App\Services\PageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\DB;
 class LinkController extends Controller
 {
     protected $linkService;
+
     protected $adminLinkService;
+
     protected $pageService;
 
     protected $admin;
+
     public function __construct(LinkService $linkService, PageService $pageService, AdminLinkService $adminLinkService)
     {
         $this->linkService = $linkService;
@@ -28,12 +31,15 @@ class LinkController extends Controller
             return $next($request);
         });
     }
+
     public function add(Request $request)
     {
         $link_items = $this->adminLinkService->get();
         $pages = $this->pageService->get();
-        return view('admin.link.add', compact('link_items','pages'));
+
+        return view('admin.link.add', compact('link_items', 'pages'));
     }
+
     public function store(LinkStore $request)
     {
         try {

@@ -17,6 +17,6 @@ class ComponentItems extends Model
         'value',
         'value1',
         'status',
-        'sr_no'
+        'sr_no',
     ];
 }

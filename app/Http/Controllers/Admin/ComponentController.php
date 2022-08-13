@@ -39,6 +39,7 @@ class ComponentController extends Controller
     public function add(Request $request, Component $component)
     {
         $component->load('items');
+
         return view('admin.component.add', compact('component'));
     }
 

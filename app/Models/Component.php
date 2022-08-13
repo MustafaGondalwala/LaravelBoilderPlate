@@ -22,14 +22,17 @@ class Component extends Model
     {
         return $this->hasMany(ComponentItems::class);
     }
+
     public function getEncryptedIdAttribute()
     {
         return encrypt_param($this->id);
     }
+
     public function scopeActive($query)
     {
-        return $query->where('status',1);
+        return $query->where('status', 1);
     }
+
     public function scopeOrderBySr($query)
     {
         return $query->orderBy('sr_no');

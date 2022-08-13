@@ -11,26 +11,33 @@ class Page extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
     protected $fillable = [
         'id',
         'name',
-        'status'
+        'status',
     ];
 
-    public function components():HasMany{
+    public function components(): HasMany
+    {
         return $this->hasMany(PageComponent::class);
     }
-    public function headerItem():HasMany{
+
+    public function headerItem(): HasMany
+    {
         return $this->hasMany(HeaderItem::class);
     }
-    public function footerItem():HasMany{
+
+    public function footerItem(): HasMany
+    {
         return $this->hasMany(FooterItem::class);
     }
 
-    public function getEncryptedIdAttribute():string|null
+    public function getEncryptedIdAttribute(): string|null
     {
         return encrypt_param($this->id);
     }
+
     public function scopeActive($query)
     {
         return $query->where(['status' => 1]);

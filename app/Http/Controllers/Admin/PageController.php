@@ -3,16 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Page;
-use Illuminate\Http\Request;
-use App\Services\Admin\PageService;
 use App\Http\Requests\Admin\PageStore;
+use App\Models\Page;
+use App\Services\Admin\PageService;
 use App\Services\ComponentService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
     protected $pageService;
+
     protected $componentService;
 
     protected $admin;
@@ -43,11 +44,13 @@ class PageController extends Controller
         $page->load([
             'components',
             'headerItem',
-            'footerItem'
+            'footerItem',
         ]);
         $components = $this->componentService->getList();
-        return view('admin.page.add', compact('page','components'));
+
+        return view('admin.page.add', compact('page', 'components'));
     }
+
     public function store(PageStore $request, Page $page)
     {
         try {
@@ -57,10 +60,10 @@ class PageController extends Controller
 
             $addData = $request->only([
                 'name',
-                'status'
+                'status',
             ]);
 
-            $this->pageService->addUpdate($page, $addData, $request->component,$request->header_item, $request->footer_item);
+            $this->pageService->addUpdate($page, $addData, $request->component, $request->header_item, $request->footer_item);
 
             DB::commit();
 

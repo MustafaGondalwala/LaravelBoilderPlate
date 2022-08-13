@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\HeaderItemStore;
-use App\Models\Header;
-use App\Models\HeaderItem;
 use App\Services\Admin\HeaderService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -21,12 +19,14 @@ class HeaderController extends Controller
             return $next($request);
         });
     }
+
     public function add(Request $request)
     {
         $header_items = $this->headerService->get();
 
         return view('admin.header.add', compact('header_items'));
     }
+
     public function store(HeaderItemStore $request)
     {
         try {

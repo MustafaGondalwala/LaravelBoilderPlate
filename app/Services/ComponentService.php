@@ -9,7 +9,8 @@ use App\Models\Component;
  */
 class ComponentService
 {
-    function getList(){
-        return Component::active()->get(['id','name']);
+    public function getList()
+    {
+        return Component::active()->get(['id', 'name']);
     }
 }

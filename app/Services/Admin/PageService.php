@@ -3,9 +3,6 @@
 namespace App\Services\Admin;
 
 use App\Models\Page;
-
-use App\Services\Admin\HeaderService;
-use App\Services\Admin\FooterService;
 use Yajra\DataTables\Facades\DataTables;
 
 /**
@@ -15,7 +12,7 @@ class PageService
 {
     public function datatable($request)
     {
-        $data = Page::withCount(['components' => function($query){
+        $data = Page::withCount(['components' => function ($query) {
             return $query->active();
         }])->latest();
         if ($request->name != '') {
@@ -51,7 +48,8 @@ class PageService
             ->make(true);
     }
 
-    function addUpdateComponent(Page $page, array $store){
+    public function addUpdateComponent(Page $page, array $store)
+    {
         extract($store, EXTR_PREFIX_SAME, 'dup');
         foreach ($sr_no as $key => $no) {
             $component_id_item = isset($component_id[$key]) ? $component_id[$key] : null;
@@ -71,7 +69,8 @@ class PageService
             );
         }
     }
-    function addUpdate(Page $page, array $addData, array $components, array $header_item, array $footer_item): void
+
+    public function addUpdate(Page $page, array $addData, array $components, array $header_item, array $footer_item): void
     {
         $updatePage = Page::updateOrCreate(
             ['id' => $page->exists == true ? $page->id : null],

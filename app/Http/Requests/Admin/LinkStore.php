@@ -24,7 +24,7 @@ class LinkStore extends FormRequest
     public function rules()
     {
         return [
-            'link_item' => 'required|array'
+            'link_item' => 'required|array',
         ];
     }
 }

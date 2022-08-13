@@ -10,6 +10,7 @@ class Footer extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
     protected $fillable = [
         'sr_no',
         'type',

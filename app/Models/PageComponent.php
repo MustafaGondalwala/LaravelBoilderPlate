@@ -10,18 +10,20 @@ class PageComponent extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
     protected $fillable = [
         'sr_no',
         'component_id',
-        'status'
+        'status',
     ];
 
     public function getEncryptedIdAttribute()
     {
         return encrypt_param($this->id);
     }
-    public function scopeActive($query){
+
+    public function scopeActive($query)
+    {
         return $query->where(['status' => 1]);
     }
 }
-

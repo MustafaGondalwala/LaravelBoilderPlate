@@ -16,10 +16,10 @@ return [
         'css_link',
         'icon',
         'title',
-        'script'
+        'script',
     ],
     'footer_type' => [
         'script',
-        'footer_link'
+        'footer_link',
     ],
 ];

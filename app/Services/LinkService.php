@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Models\Page;
 use App\Models\PageLink;
 use Illuminate\Database\Eloquent\Collection;
 
@@ -11,7 +10,8 @@ use Illuminate\Database\Eloquent\Collection;
  */
 class LinkService
 {
-    function get():Collection{
+    public function get(): Collection
+    {
         return PageLink::withPages()->latest()->get();
     }
 }
