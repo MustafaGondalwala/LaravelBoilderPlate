@@ -11,10 +11,6 @@ class Component extends Model
 {
     use HasFactory;
     use SoftDeletes;
-
-    protected $appends = [
-        'dyanmicHtml'
-    ];
     protected $fillable = [
         'name',
         'html',
