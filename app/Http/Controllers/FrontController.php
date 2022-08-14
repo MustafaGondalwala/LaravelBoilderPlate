@@ -24,21 +24,31 @@ class FrontController extends Controller
         $this->footerService = $footerService;
     }
 
-    public function index(Request $request, $page){
+    public function index(Request $request, $page)
+    {
         try {
             logger()->info('Page View', ['page' => $page]);
-            $page_id = $this->linkService->getPageIdByValue($page);
 
-            if($page_id == null){
-                throw new Error("Not Able to Find Page");
+            $key = 'view-cached-page-' . $page;
+            if (cache()->has($key)) {
+                return cache()->get($key);
             }
-            $page = $this->pageService->getById($page_id);
+            else {
+                $page_id = $this->linkService->getPageIdByValue($page);
 
-            $default_header = $this->headerService->default();
-            $default_footer = $this->footerService->default();
+                if ($page_id == null) {
+                    throw new Error("Not Able to Find Page");
+                }
+                $page = $this->pageService->getById($page_id);
 
-            return view('front.render', compact('default_header','default_footer','page'));
-        } catch (\Exception $e) {
+                $default_header = $this->headerService->default();
+                $default_footer = $this->footerService->default();
+                $cachedView = view('front.render', compact('default_header', 'default_footer', 'page'));
+                cache()->put($key, $cachedView, custom('cache_seconds'));      
+                return $cachedView;                                   
+            }
+        }
+        catch (\Exception $e) {
             dd($e);
             logger()->error('Page View Error', [$request->all()]);
             return back()->with('message', 'Error Occured');
