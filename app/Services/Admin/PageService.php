@@ -12,7 +12,7 @@ class PageService
 {
     public function datatable($request)
     {
-        $data = Page::withCount(['components' => function ($query) {
+        $data = Page::withCount(['pageComponents' => function ($query) {
             return $query->active();
         }])->latest();
         if ($request->name != '') {

@@ -18,13 +18,17 @@ class PageService
         return cache()->remember('get-page-'.$page_id, custom('cache_seconds'), function () use($page_id){
             return Page::query()->
                 active()->
-                find($page_id)->
                 with([
-                    'components',
+                    'pageComponents' => [
+                        'component' => [
+                            'items'
+                        ]
+                    ],
                     'headerItem',
                     'footerItem'
                 ])->
-                firstOrFail(['id']);
+                find($page_id);
+
         });
     }
     public function searchByValue(string $search):Page{

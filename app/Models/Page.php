@@ -22,6 +22,10 @@ class Page extends Model
     {
         return $this->hasMany(PageComponent::class);
     }
+    public function pageComponents(): HasMany
+    {
+        return $this->hasMany(PageComponent::class);
+    }
 
     public function headerItem(): HasMany
     {

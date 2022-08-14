@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('component_id')->nullable()->constrained('components');
             $table->string('name');
+            $table->integer('sr_no')->nullable();
+            $table->boolean('status')->default(true);
             $table->enum('type', ['link', 'image', 'text', 'video']);
             $table->text('value');
             $table->string('value1')->nullable();

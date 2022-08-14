@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Collection;
 class FooterService
 {
     function default():Collection{
-        return Footer::orderBySr()->get();
+        return cache()->remember('default_footer', custom('cache_seconds'), function (){
+            return Footer::orderBySr()->select(['id','type','value','value1'])->get();
+        });
     }
 }

@@ -12,6 +12,9 @@ class Component extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $appends = [
+        'dyanmicHtml'
+    ];
     protected $fillable = [
         'name',
         'html',
@@ -36,5 +39,22 @@ class Component extends Model
     public function scopeOrderBySr($query)
     {
         return $query->orderBy('sr_no');
+    }
+
+    public function getHtml(){
+        return $this->html;
+    }
+    
+    public function getDynamicHtmlAttribute(){
+        $html = $this->getHtml();
+        if(!$html){
+            return;
+        }
+        foreach($this->items as $item){
+            if(strstr( $html, $item->searchKey()) == true){
+                $html = str_replace($item->searchKey(),$item->getValue(), $html);
+            }
+        }
+        return $html;
     }
 }

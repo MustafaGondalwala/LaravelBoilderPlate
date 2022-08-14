@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Collection;
 class HeaderService
 {
     function default():Collection{
-        return Header::orderBySr()->select(['id','type','value','value1','value3'])->get();
+        return cache()->remember('default_head', custom('cache_seconds'), function (){
+            return Header::orderBySr()->select(['id','type','value','value1','value3'])->get();
+        });
     }
 }

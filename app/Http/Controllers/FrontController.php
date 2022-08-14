@@ -43,7 +43,7 @@ class FrontController extends Controller
 
                 $default_header = $this->headerService->default();
                 $default_footer = $this->footerService->default();
-                $cachedView = view('front.render', compact('default_header', 'default_footer', 'page'));
+                $cachedView = view('front.render', compact('default_header', 'default_footer', 'page'))->render();
                 cache()->put($key, $cachedView, custom('cache_seconds'));      
                 return $cachedView;                                   
             }

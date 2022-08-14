@@ -19,4 +19,13 @@ class ComponentItems extends Model
         'status',
         'sr_no',
     ];
+    function searchKey():string{
+        return '##'.$this->getKey().'##';
+    }
+    function getKey():string{
+        return $this->name;
+    }
+    function getValue():string{
+        return $this->value;
+    }
 }
