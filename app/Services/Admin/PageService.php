@@ -55,6 +55,9 @@ class PageService
             $component_id_item = isset($component_id[$key]) ? $component_id[$key] : null;
             $status_item = isset($status[$key]) ? $status[$key] : null;
 
+            if($no == null){
+                continue;
+            }
             $addData = [
                 'sr_no' => $no,
                 'component_id' => $component_id_item,
@@ -76,7 +79,6 @@ class PageService
             ['id' => $page->exists == true ? $page->id : null],
             $addData
         );
-
         self::addUpdateComponent($updatePage, $components);
         HeaderService::addUpdateType($header_item, $page->id);
         FooterService::addUpdateType($footer_item, $page->id);

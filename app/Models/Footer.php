@@ -18,4 +18,8 @@ class Footer extends Model
         'value1',
         'status',
     ];
+    public function scopeOrderBySr($query)
+    {
+        return $query->orderBy('sr_no');
+    }
 }

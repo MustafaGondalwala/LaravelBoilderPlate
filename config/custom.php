@@ -17,10 +17,13 @@ return [
         'css_file',
         'icon',
         'title',
+        'script_file',
         'script',
+        'html'
     ],
     'footer_type' => [
         'script',
-        'footer_file',
+        'script_file',
+        'html'
     ],
 ];

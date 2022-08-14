@@ -18,15 +18,24 @@ class FooterService
             $value_item = isset($value[$key]) ? $value[$key] : null;
             $value1_item = isset($value1[$key]) ? $value1[$key] : null;
             $status_item = isset($status[$key]) ? $status[$key] : null;
-
             if ($no == null) {
                 continue;
+            }
+            
+            if($type_item == "script_file"){
+                $path = '/'.custom('username').'/header/'.$type_item.'/';
+                $store_value = "";
+                if($value1_item != null){
+                    $store_value = uploadFile($value1_item, $path);
+                }
+            }else{
+                $store_value = $value_item;
             }
 
             $addData = [
                 'sr_no' => $no,
                 'type' => $type_item,
-                'value' => $value_item,
+                'value' => $store_value,
                 'value1' => $value1_item,
                 'status' => $status_item,
                 'page_id' => $page_id,
@@ -49,6 +58,6 @@ class FooterService
 
     public function get()
     {
-        return FooterItem::whereNull('page_id')->orderBy('sr_no')->get();
+        return Footer::orderBy('sr_no')->get();
     }
 }

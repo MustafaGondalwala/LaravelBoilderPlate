@@ -13,7 +13,7 @@
         <input type="text" class="form-control" name="footer_item[value][]" value="{{ @$item->value }}"/>
     </td>
     <td>
-        <input type="text" class="form-control" name="footer_item[value1][]" value="{{ @$item->value1 }}"/>
+        <input type="file" class="form-control" name="footer_item[value1][]" value="{{ @$item->value1 }}"/>
     </td>
     <td>
         <select class="form-control" id="status" name="footer_item[status][]" >

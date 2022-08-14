@@ -22,10 +22,20 @@ class HeaderService
             if ($no == null) {
                 continue;
             }
+            
+            if($type_item == "file" || $type_item == "image" || $type_item ==  "video" || $type_item == "script_file" || $type_item == "css_file"){
+                $path = '/'.custom('username').'/header/'.$type_item.'/';
+                $store_value = "";
+                if($value1_item != null){
+                    $store_value = uploadFile($value1_item, $path);
+                }
+            }else{
+                $store_value = $value_item;
+            }
             $addData = [
                 'sr_no' => $no,
                 'type' => $type_item,
-                'value' => $value_item,
+                'value' => $store_value,
                 'value1' => $value1_item,
                 'status' => $status_item,
                 'page_id' => $page_id,

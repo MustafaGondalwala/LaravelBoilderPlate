@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['script', 'footer_link']);
+            $table->enum('type', ['script', 'script_file','html']);
             $table->string('value');
             $table->string('value1')->nullable();
             $table->string('value2')->nullable();

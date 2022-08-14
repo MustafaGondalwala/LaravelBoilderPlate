@@ -17,8 +17,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <td>
-                    <button id="footer_add" class="btn btn-primary btn-sm">Add</button>
+                <td colspan="4">
+                    <button id="footer_add_button" class="btn btn-primary btn-sm">Add</button>
                     <button id="footer_remove" class="btn btn-warning btn-sm">Remove</button>
                 </td>
             </tr>
@@ -27,7 +27,7 @@
 </div>
 @section('footer_item')
 <script>
-    $("#footer_add").click(function(e){
+    $("#footer_add_button").click(function(e){
         e.preventDefault()
         const add_html = `@include('admin.footer.utils.footer_item_add')`
         $("#footer_add_more").append(add_html)

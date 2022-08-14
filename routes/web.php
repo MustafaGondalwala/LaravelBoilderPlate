@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\FrontController;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,3 +13,4 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/{page}', [FrontController::class,'index']);

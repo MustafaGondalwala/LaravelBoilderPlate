@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('header_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('page_id')->nullable()->constrained('pages');
-            $table->enum('type', ['meta', 'css_link', 'icon', 'title', 'script']);
+            $table->enum('type', ['meta', 'css_file', 'icon', 'title', 'script_file','script','html']);
             $table->string('value');
             $table->string('value1')->nullable();
             $table->string('value2')->nullable();
+            $table->string('value3')->nullable();
             $table->integer('sr_no');
             $table->boolean('status')->default(true);
             $table->timestamps();
