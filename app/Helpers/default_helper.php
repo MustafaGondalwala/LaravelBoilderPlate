@@ -87,7 +87,6 @@ function clean($string)
 
 function uploadFile($file, $path)
 {
-    // $filename = rand(1, 1000000).'_'.pathinfo(clean($file->getClientOriginalName()), PATHINFO_FILENAME).'.'.$file->getClientOriginalExtension();
     $filename = pathinfo(clean($file->getClientOriginalName()), PATHINFO_FILENAME).'-'.rand(1, 1000000).'.'.$file->getClientOriginalExtension();
     Storage::disk('public')->putFileAs(
         $path,
@@ -96,4 +95,23 @@ function uploadFile($file, $path)
     );
 
     return url('storage'.$path.$filename);
+}
+
+function uploadUrlToStorage($url, $path)
+{
+    try{
+        $ext = pathinfo($url, PATHINFO_EXTENSION); 
+        $name =pathinfo($url, PATHINFO_FILENAME);
+        $filename = pathinfo(clean($name), PATHINFO_FILENAME).'-'.rand(1, 1000000).'.'.$ext;
+        $contents = file_get_contents($url);
+    
+        Storage::disk('public')->put(
+            $path.$filename,
+            $contents
+        );
+        return url('storage'.$path.$filename);
+    }catch(\Exception){
+        logger()->error("Error in File Download ",['url' =>  $url, 'path' =>$path]);
+        return "";
+    }
 }

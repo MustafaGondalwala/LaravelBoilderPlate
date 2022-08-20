@@ -26,9 +26,15 @@ class HeaderService
             if($type_item == "file" || $type_item == "image" || $type_item ==  "video" || $type_item == "script_file" || $type_item == "css_file"){
                 $path = '/'.custom('username').'/header/'.$type_item.'/';
                 $store_value = "";
-                if($value1_item != null){
+                
+                if (filter_var($value_item, FILTER_VALIDATE_URL)) { 
+
+                    $store_value = uploadUrlToStorage($value_item, $path);
+
+                }else if($value1_item != null){
                     $store_value = uploadFile($value1_item, $path);
                 }
+                
             }else{
                 $store_value = $value_item;
             }

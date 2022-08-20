@@ -1,9 +1,5 @@
 <tr>
     <td>
-        <input rows="10" type="number" id="sr_no" class="form-control"
-        name="component_item[sr_no][]" value="{{ @$item->sr_no }}"/>
-    </td>
-    <td>
         <input rows="10" type="text" id="link_name" class="form-control"
         name="component_item[link_name][]" value="{{ @$item->name }}"/>
     </td>

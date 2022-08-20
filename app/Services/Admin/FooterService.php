@@ -23,9 +23,14 @@ class FooterService
             }
             
             if($type_item == "script_file"){
-                $path = '/'.custom('username').'/header/'.$type_item.'/';
+                $path = '/'.custom('username').'/footer/'.$type_item.'/';
                 $store_value = "";
-                if($value1_item != null){
+                
+                if (filter_var($value_item, FILTER_VALIDATE_URL)) { 
+
+                    $store_value = uploadUrlToStorage($value_item, $path);
+
+                }else if($value1_item != null){
                     $store_value = uploadFile($value1_item, $path);
                 }
             }else{

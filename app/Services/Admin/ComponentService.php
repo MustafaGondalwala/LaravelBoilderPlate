@@ -48,10 +48,10 @@ class ComponentService
         extract($store, EXTR_PREFIX_SAME, 'dup');
         foreach ($link_name as $key => $name) {
             $type_item = $type[$key];
-            $sr_no_item = $sr_no[$key];
             $status_item = $status[$key];
             $value_item = isset($value[$key]) ? $value[$key] : null;
             $value1_item = isset($value1[$key]) ? $value1[$key] : null;
+            $status_value = isset($status[$key]) ? $status[$key] : null;
 
             if($name == null){
                 continue;
@@ -59,7 +59,12 @@ class ComponentService
             if($type_item == "file" || $type_item == "image" || $type_item ==  "video"){
                 $path = '/'.custom('username').'/component/'.$type_item.'/';
                 $store_value = "";
-                if($value1_item != null){
+                
+                if (filter_var($value_item, FILTER_VALIDATE_URL)) { 
+
+                    $store_value = uploadUrlToStorage($value_item, $path);
+
+                }else if($value1_item != null){
                     $store_value = uploadFile($value1_item, $path);
                 }
             }else{
@@ -68,11 +73,11 @@ class ComponentService
 
             $addData = [
                 'name' => $name,
-                'sr_no' => $sr_no_item,
                 'status' => $status_item,
                 'type' => $type_item,
                 'value' => $store_value,
                 'value1' => null,
+                'status' => $status_value
             ];
             $checkNameExists = $component->items()->where(['name' => $name])->exists();
             $component->items()->updateOrCreate(
