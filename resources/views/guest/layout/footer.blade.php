@@ -6,7 +6,7 @@
                         <div class="footer-heading">
                             <h3>About Us</h3>
                         </div>
-                        <p>Codingflic works to create and promote your online presence. We aim to surprise, satisfy and delight our clients with unexpected ideas, unique strategies, and effective solutions. We're unique and highly cost-effective. We Offer a Wide Range of Services like Web Designing and Development, Digital Marketing, Branding, Quality Assurance, Graphic Designing, etc.</p>
+                        <p>Skylink works to create and promote your online presence. We aim to surprise, satisfy and delight our clients with unexpected ideas, unique strategies, and effective solutions. We're unique and highly cost-effective. We Offer a Wide Range of Services like Web Designing and Development, Digital Marketing, Branding, Quality Assurance, Graphic Designing, etc.</p>
                         <ul class="footer-social">
                             <li>
                                 <a href="https://www.facebook.com/codingflicindia" class="bg-3955bc">
@@ -14,17 +14,17 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/codingflic" class="bg-1da1f2">
+                                <a href="https://twitter.com/skylink" class="bg-1da1f2">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/codingflic/" class="bg-004dff">
+                                <a href="https://www.instagram.com/skylink/" class="bg-004dff">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/company/codingflic/" class="bg-0273af">
+                                <a href="https://www.linkedin.com/company/skylink/" class="bg-0273af">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
                             </li>
@@ -64,12 +64,12 @@
                     <div class="footer-info-contact">
                         <i class="flaticon-call-answer"></i>
                         <h3>Phone</h3>
-                        <span>+91 9392337614</span>
+                        <span>+91 8200608406</span>
                     </div>
                     <div class="footer-info-contact">
                         <i class="flaticon-envelope"></i>
                         <h3>Email</h3>
-                        <span><a href="mailto:info@codingflic.com">info@codingflic.com</a></span>
+                        <span><a href="mailto:info@skylink.com">info@skylink.com</a></span>
                     </div>
                     <div class="footer-info-contact">
                         <i class="flaticon-placeholder-filled-point"></i>
@@ -95,7 +95,7 @@ Telangana 500081</span>
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <p>
-                        <i class="far fa-copyright"></i> 2021 Codingflic. All Rights Reserved by Codingflic
+                        <i class="far fa-copyright"></i> 2021 Skylink. All Rights Reserved by Skylink
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-6">

@@ -88,7 +88,7 @@
 
 <p>The importance of having a website in today’s world is pertinent to organizations as it is a powerful tool for business communication. In this digital era, it is absolutely essential that every business must have an online presence. You search in Google when you need something and see what shows in the search results. Like you, everyone is looking for the businesses that pop up in the Google results. This scenario clearly shows that having a website is becoming important for businesses of all sizes.</p>
 
-<p>Codingflic works to create and promote your online presence. We aim to surprise, satisfy and delight our clients with unexpected ideas, unique strategies, and effective solutions. We're unique and highly cost-effective. We Offer a Wide Range of Services like Web Designing and Development, Digital Marketing, Branding, Quality Assurance, Graphic Designing, etc. We will be your partner in creating impressions for your audience. Sit back and relax. Our hands are on it!</p>
+<p>Skylink works to create and promote your online presence. We aim to surprise, satisfy and delight our clients with unexpected ideas, unique strategies, and effective solutions. We're unique and highly cost-effective. We Offer a Wide Range of Services like Web Designing and Development, Digital Marketing, Branding, Quality Assurance, Graphic Designing, etc. We will be your partner in creating impressions for your audience. Sit back and relax. Our hands are on it!</p>
 
 </p>
                         </div>

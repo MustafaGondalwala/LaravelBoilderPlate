@@ -29,7 +29,7 @@
                         </div>
                         <div class="content">
                             <h4>Phone</h4>
-                            <p><a href="#">+91 9392337614</a></p>
+                            <p><a href="#">+91 8200608406</a></p>
                           
                         </div>
                     </div>
@@ -41,8 +41,8 @@
                         </div>
                         <div class="content">
                             <h4>E-mail</h4>
-                            <p><a href="#">info@codingflic.com </a></p>
-                            <p><a href="#">support@codingflic.com</a></p>
+                            <p><a href="#">info@skylink.com </a></p>
+                            <p><a href="#">support@skylink.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -61,13 +61,13 @@ Telangana 500081</span></p>
                 <div class="col-lg-6">
                     <div class="contact-text">
                         <h3>Get in Touch</h3>
-                        <p>Codingflic is helping thousands of people and businesses create their online presence. If you have any questions about our services and want to get in touch with our team you can reach us on with the information beside or a submit the form and our team will get back to you at the earliest.</p>
+                        <p>Skylink is helping thousands of people and businesses create their online presence. If you have any questions about our services and want to get in touch with our team you can reach us on with the information beside or a submit the form and our team will get back to you at the earliest.</p>
                         <ul class="social-links">
                             <li><a href="https://www.facebook.com/codingflicindia"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://twitter.com/codingflic"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://www.instagram.com/codingflic/"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/codingflic/"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href="https://in.pinterest.com/codingflic"><i class="fab fa-pinterest"></i></a></li>
+                            <li><a href="https://twitter.com/skylink"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/skylink/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/skylink/"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://in.pinterest.com/skylink"><i class="fab fa-pinterest"></i></a></li>
                         </ul>
                     </div>
                 </div>

@@ -58,7 +58,7 @@
                         <div class="row hidden-lg bg-black block-mobile">
                             <ul class="">
                                 <li>
-                                    <a type="button" href="tel:9392337614" class="btn default-btn-one  btn-info btn-sm"> <i class="fa fa-phone"></i> Call Us</a>
+                                    <a type="button" href="tel:8200608406" class="btn default-btn-one  btn-info btn-sm"> <i class="fa fa-phone"></i> Call Us</a>
                                 </li>
                                 <li> <button type="button" class="btn default-btn-one  btn-info btn-sm" data-toggle="modal" data-target="#myModal">Consult Us </button></li>
                             </ul>

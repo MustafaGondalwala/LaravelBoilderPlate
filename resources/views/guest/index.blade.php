@@ -8,7 +8,7 @@
                     <div class="testimonial-content row">
                         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                             <div class="main-banner-content">
-                                <span class="d-block text-uppercase t-text-alpha sm-text"> Welcome to Codingflic </span>
+                                <span class="d-block text-uppercase t-text-alpha sm-text"> Welcome to Skylink </span>
                                 <h1>Helping Brands with their Digital Transformation.</h1>
                                 <p>We help brilliant minds to explore their way. Building brands with purpose and passion
                                 </p>
@@ -30,7 +30,7 @@
                     <div class="testimonial-content  row">
                         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                             <div class="main-banner-content">
-                                <span class="d-block text-uppercase t-text-alpha sm-text"> Welcome to Codingflic </span>
+                                <span class="d-block text-uppercase t-text-alpha sm-text"> Welcome to Skylink </span>
                                 <h1>Defining Your Success with Our Capabilities.</h1>
                                 <p>Bring your imagination to real life. We are here to connect creativity with dreams.</p>
                                 <div class="banner-btn">
@@ -51,7 +51,7 @@
                     <div class="testimonial-content  row">
                         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                             <div class="main-banner-content">
-                                <span class="d-block text-uppercase t-text-alpha sm-text"> Welcome to Codingflic </span>
+                                <span class="d-block text-uppercase t-text-alpha sm-text"> Welcome to Skylink </span>
                                 <h1>Your Growth Partners in Your Entrepreneurial Journey. </h1>
                                 <p>Building actions to brands. Bring out your business to the whole world.</p>
                                 <div class="banner-btn">
@@ -88,7 +88,7 @@
                             <h2>We are Dynamic Team of SEO Agency</h2>
                             <div class="decor" style="background-image: url(assets/images/icons/decor-1.html);"></div>
                         </div>
-                        <p>Codingflic works to create and promote your online presence. We aim to surprise, satisfy and
+                        <p>Skylink works to create and promote your online presence. We aim to surprise, satisfy and
                             delight our clients with unexpected ideas, unique strategies, and effective solutions. We're
                             unique and highly cost-effective. We Offer a Wide Range of Services like Web Designing and
                             Development, Digital Marketing, Branding, Quality Assurance, Graphic Designing, etc. We will
@@ -116,7 +116,7 @@
                         <p>With more consumers and businesses shopping and researching products online, it’s become
                             critical for companies to recognize the importance of Internet marketing. Start growing your
                             business in brand-new ways. If you’re looking for a company that drives results, look no
-                            further than Codingflic. </p>
+                            further than Skylink. </p>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12">
@@ -173,7 +173,7 @@
         </div>
         <div class="features-animation">
             <div class="shape-img1"><img src="assets/img/shape/8.png" alt="search engine optimisation"></div>
-            <div class="shape-img2"><img src="assets/img/shape/5.png" alt="codingflic"></div>
+            <div class="shape-img2"><img src="assets/img/shape/5.png" alt="skylink"></div>
         </div>
     </section>
     <!-- End Main Banner Area -->
@@ -446,7 +446,7 @@
                     <div class="testimonial-slides owl-carousel owl-theme">
                         <div class="testimonial-single-item">
                             <div class="testimonial-image">
-                                <img src="assets/img/client-image/1.png" alt="codingflic">
+                                <img src="assets/img/client-image/1.png" alt="skylink">
                             </div>
                             <div class="testimonial-content-text">
                                 <h3>Gayathri</h3>
@@ -454,17 +454,17 @@
                                 <div class="icon">
                                     <i class="flaticon-quote"></i>
                                 </div>
-                                <p>My experience with Codingflic has been just incredible from the start. Their team is
+                                <p>My experience with Skylink has been just incredible from the start. Their team is
                                     organized, forward-thinking, helpful, and flexible. They continually stay ahead of
                                     marketing industry trends and suggest tactics on how to keep our company's marketing
                                     at the forefront. We couldn't do what we do without their support. From graphics and
-                                    website design to copywriting and marketing strategy, Codingflic does it all, and
+                                    website design to copywriting and marketing strategy, Skylink does it all, and
                                     they do it well.</p>
                             </div>
                         </div>
                         <div class="testimonial-single-item">
                             <div class="testimonial-image">
-                                <img src="assets/img/client-image/2.png" alt="codingflic">
+                                <img src="assets/img/client-image/2.png" alt="skylink">
                             </div>
                             <div class="testimonial-content-text">
                                 <h3>Swetha</h3>
@@ -472,7 +472,7 @@
                                 <div class="icon">
                                     <i class="flaticon-quote"></i>
                                 </div>
-                                <p>Codingflic team walked our company through a major website overhaul and brand
+                                <p>Skylink team walked our company through a major website overhaul and brand
                                     refresh. A massive effort. We had many questions and revisions, and their team were
                                     always available, responsive and helpful during the months-long process. I can’t
                                     recommend them enough and can’t imagine where we would have been without them. Thank
@@ -481,7 +481,7 @@
                         </div>
                         <div class="testimonial-single-item">
                             <div class="testimonial-image">
-                                <img src="assets/img/client-image/3.png" alt="codingflic">
+                                <img src="assets/img/client-image/3.png" alt="skylink">
                             </div>
                             <div class="testimonial-content-text">
                                 <h3>Gautam</h3>
@@ -489,7 +489,7 @@
                                 <div class="icon">
                                     <i class="flaticon-quote"></i>
                                 </div>
-                                <p>Having worked with the team from Codingflic, I have so much good to say about them!
+                                <p>Having worked with the team from Skylink, I have so much good to say about them!
                                     They were integral in helping us redefine our brand and have helped mentor us
                                     through the process of lead nurturing. They work hand in hand with our business
                                     development team to maximize our leads and secure the best ROI. Their team really
@@ -503,7 +503,7 @@
                         </div>
                         <div class="testimonial-single-item">
                             <div class="testimonial-image">
-                                <img src="assets/img/client-image/1.png" alt="codingflic">
+                                <img src="assets/img/client-image/1.png" alt="skylink">
                             </div>
                             <div class="testimonial-content-text">
                                 <h3>Mahi</h3>
@@ -511,9 +511,9 @@
                                 <div class="icon">
                                     <i class="flaticon-quote"></i>
                                 </div>
-                                <p>It was a pleasure working with Codingflic. They pay attention to every detail. They
+                                <p>It was a pleasure working with Skylink. They pay attention to every detail. They
                                     went above and beyond to make sure that the site was exactly what I had envisioned.
-                                    I would highly recommend Codingflic to any one who is looking for a professional web
+                                    I would highly recommend Skylink to any one who is looking for a professional web
                                     designer.</p>
                             </div>
                         </div>
@@ -616,22 +616,22 @@
             <div class="partner-slider owl-carousel owl-theme">
                 <div class="partner-item">
                     <a href="#">
-                        <img src="assets/img/partnar/1.png" alt="codingflic">
+                        <img src="assets/img/partnar/1.png" alt="skylink">
                     </a>
                 </div>
                 <div class="partner-item">
                     <a href="#">
-                        <img src="assets/img/partnar/2.png" alt="codingflic">
+                        <img src="assets/img/partnar/2.png" alt="skylink">
                     </a>
                 </div>
                 <div class="partner-item">
                     <a href="#">
-                        <img src="assets/img/partnar/3.png" alt="codingflic">
+                        <img src="assets/img/partnar/3.png" alt="skylink">
                     </a>
                 </div>
                 <div class="partner-item">
                     <a href="#">
-                        <img src="assets/img/partnar/4.png" alt="codingflic">
+                        <img src="assets/img/partnar/4.png" alt="skylink">
                     </a>
                 </div>
 
