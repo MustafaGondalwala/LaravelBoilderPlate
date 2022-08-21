@@ -41,8 +41,8 @@
                         </div>
                         <div class="content">
                             <h4>E-mail</h4>
-                            <p><a href="#">info@skylink.com </a></p>
-                            <p><a href="#">support@skylink.com</a></p>
+                            <p><a href="mailto:info@skylinkinfotech.com">info@skylinkinfotech.com </a></p>
+                            <p><a href="mailto:support@skylinkinfotech.com">support@skylinkinfotech.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="content">
                             <h4>Location</h4>
-                            <p>Mehsana</span></p>
+                            <p>F-46, First Floor, Goldan Square, Radhanpur road Mehsana-2 384002</span></p>
                         </div>
                     </div>
                 </div>

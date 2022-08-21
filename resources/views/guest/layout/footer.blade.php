@@ -69,12 +69,12 @@
                     <div class="footer-info-contact">
                         <i class="flaticon-envelope"></i>
                         <h3>Email</h3>
-                        <span><a href="mailto:info@skylink.com">info@skylink.com</a></span>
+                        <span><a href="mailto:info@skylinkinfotech.com">info@skylinkinfotech.com</a></span>
                     </div>
                     <div class="footer-info-contact">
                         <i class="flaticon-placeholder-filled-point"></i>
                         <h3>Address</h3>
-                        <span>Mehsana</span>
+                        <span>F-46, First Floor, Goldan Square, Radhanpur road Mehsana-2 384002</span>
                     </div>
                 </div>
             </div>
