@@ -53,8 +53,7 @@
                         </div>
                         <div class="content">
                             <h4>Location</h4>
-                            <p>First Floor, WeWork Krishe Emarald, Kondapur Main Road, Laxmi Cybercity, Whitefields Kondapur Hyderabad,
-Telangana 500081</span></p>
+                            <p>Mehsana</span></p>
                         </div>
                     </div>
                 </div>
