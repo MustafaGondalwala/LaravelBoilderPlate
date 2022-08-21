@@ -2,8 +2,8 @@
         <div class="crimso-responsive-nav">
             <div class="container">
             <div class="m0-auto callus-mobile">
-                        <a href="tel:+919392337614" class="default-btn-one" style="margin-right:5px"><i class="fa fa-phone"></i>Call Us</a>
-                        <a href="https://wa.me/919392337614" class="default-btn-one"><i class="fab fa-whatsapp"></i>Whatsapp</a>
+                        <a href="tel:+918200608406" class="default-btn-one" style="margin-right:5px"><i class="fa fa-phone"></i>Call Us</a>
+                        <a href="https://wa.me/918200608406" class="default-btn-one"><i class="fab fa-whatsapp"></i>Whatsapp</a>
                     </div>
                 <div class="crimso-responsive-menu">
                     <div class="logo">
