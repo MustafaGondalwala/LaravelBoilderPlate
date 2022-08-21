@@ -8,7 +8,7 @@
                 <div class="crimso-responsive-menu">
                     <div class="logo">
                         <a href="index">
-                            <img src="assets/img/logo.svg" alt="logo">
+                            <img src="assets/img/logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="index">
-                        <img src="assets/img/logo.png" alt="logo">
+                        <img src="assets/img/logo.png" style="width:80%" alt="logo">
                     </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" style="display: block;">
                         <ul class="navbar-nav">
