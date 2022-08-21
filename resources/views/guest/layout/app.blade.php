@@ -37,7 +37,7 @@
 	Best Web Development Company in Hyderabad,
 	Best Graphic Designing Company in Hyderabad">
    <meta name="description" content="Skylink works to create and promote your online presence. We Offer a Wide Range of Services like Web Designing and Development, Digital Marketing, Branding, Quality Assurance, Graphic Designing. Book Our Services Now">
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.jpeg">
 
 
 </head>
