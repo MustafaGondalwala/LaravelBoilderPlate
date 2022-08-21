@@ -8,7 +8,7 @@
                 <div class="crimso-responsive-menu">
                     <div class="logo">
                         <a href="index">
-                            <img src="assets/img/logo.png" alt="logo">
+                            <img src="assets/img/logo.svg" alt="logo">
                         </a>
                     </div>
                 </div>
